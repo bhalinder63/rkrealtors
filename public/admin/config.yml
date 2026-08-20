@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bhalinder63/rkrealtors
   branch: main
-  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  base_url: https://rkrealtors.vercel.app
   auth_endpoint: api/auth
 
 local_backend: true
