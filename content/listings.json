@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "tag": "Residential",
+      "title": "4 BHK Kothi",
+      "location": "Sector 9 · Chandigarh",
+      "meta": "500 sq yd · Corner plot · Fully renovated",
+      "price": "₹ 5.75 Cr",
+      "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "tag": "Commercial",
+      "title": "SCO Showroom",
+      "location": "Sector 82 · Mohali",
+      "meta": "2,200 sq ft · Ground + first floor · Prime road",
+      "price": "₹ 3.20 Cr",
+      "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "tag": "Villa",
+      "title": "Independent Villa",
+      "location": "New Chandigarh",
+      "meta": "300 sq yd · 4 BHK · Private garden",
+      "price": "₹ 2.85 Cr",
+      "img": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "tag": "Flat",
+      "title": "3 BHK Flat",
+      "location": "Aerocity · Mohali",
+      "meta": "1,650 sq ft · Club + pool · 8th floor",
+      "price": "₹ 1.15 Cr",
+      "img": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "tag": "Farm House",
+      "title": "Half Acre Farm House",
+      "location": "Kurali Road · New Chandigarh",
+      "meta": "2,420 sq yd · Boundary walled · Borewell",
+      "price": "₹ 2.10 Cr",
+      "img": "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "tag": "Agriculture",
+      "title": "Agricultural Land Parcel",
+      "location": "Rajpura Belt · Patiala",
+      "meta": "4 acres · Highway touch · Clear khasra",
+      "price": "₹ 65 L / acre",
+      "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
+    }
+  ]
+}

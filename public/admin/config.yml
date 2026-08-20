@@ -1,0 +1,100 @@
+backend:
+  name: github
+  repo: bhalinder63/rkrealtors
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  auth_endpoint: api/auth
+
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: services
+    label: Services
+    files:
+      - file: content/services.json
+        name: services
+        label: Services List
+        format: json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Number, name: mark, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: text }
+
+  - name: listings
+    label: Listings
+    files:
+      - file: content/listings.json
+        name: listings
+        label: Property Listings
+        format: json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: '{{fields.title}} — {{fields.price}}'
+            fields:
+              - { label: Category Tag, name: tag, widget: string, hint: 'e.g. Residential, Commercial, Villa, Flat, Farm House, Agriculture' }
+              - { label: Title, name: title, widget: string }
+              - { label: Location, name: location, widget: string }
+              - { label: Details, name: meta, widget: string, hint: 'e.g. 500 sq yd · Corner plot · Fully renovated' }
+              - { label: Price, name: price, widget: string }
+              - { label: Photo, name: img, widget: image }
+
+  - name: team
+    label: Team
+    files:
+      - file: content/team.json
+        name: team
+        label: Team Members
+        format: json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: 'Phone (shown on site)', name: phone, widget: string, hint: 'e.g. +91 98145 53349' }
+              - { label: 'Phone link (tap-to-call)', name: tel, widget: string, hint: 'e.g. tel:+919814553349 — no spaces' }
+
+  - name: settings
+    label: Site Settings
+    files:
+      - file: content/settings.json
+        name: settings
+        label: General Settings
+        format: json
+        fields:
+          - label: Hero Images
+            name: heroImages
+            widget: list
+            field: { label: Image, name: image, widget: image }
+          - label: About Section Image
+            name: aboutImg
+            widget: image
+          - label: Stats
+            name: stats
+            widget: list
+            summary: '{{fields.value}} — {{fields.label}}'
+            fields:
+              - { label: Value, name: value, widget: string, hint: 'e.g. 4, 7, 100%' }
+              - { label: Label, name: label, widget: string }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: 'Ramandeep — Phone (shown on site)', name: ramandeepPhone, widget: string, hint: 'e.g. 9814553349' }
+              - { label: 'Ramandeep — Phone link', name: ramandeepTel, widget: string, hint: 'e.g. tel:+919814553349' }
+              - { label: 'Kamaldeep — Phone (shown on site)', name: kamaldeepPhone, widget: string }
+              - { label: 'Kamaldeep — Phone link', name: kamaldeepTel, widget: string }
+              - { label: WhatsApp Link, name: whatsapp, widget: string, hint: 'e.g. https://wa.me/919814553349' }
+              - { label: Instagram Link, name: instagram, widget: string }

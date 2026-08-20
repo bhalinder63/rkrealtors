@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "name": "Ramandeep Singh",
+      "role": "Founder & Property Consultant",
+      "phone": "+91 98145 53349",
+      "tel": "tel:+919814553349"
+    },
+    {
+      "name": "Kamaldeep Singh",
+      "role": "Property Consultant",
+      "phone": "+91 78149 53349",
+      "tel": "tel:+917814953349"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "mark": "01",
+      "title": "Residential Plot",
+      "desc": "Approved plots and society lands across New Chandigarh, Mohali and Patiala."
+    },
+    {
+      "mark": "02",
+      "title": "Commercial",
+      "desc": "Shops, SCOs and showrooms on high-footfall and corporate corridors."
+    },
+    {
+      "mark": "03",
+      "title": "Builder Floor",
+      "desc": "Ready-to-move and under-construction floors with clear titles."
+    },
+    {
+      "mark": "04",
+      "title": "Flats",
+      "desc": "Apartments in gated societies — resale, fresh booking and rentals."
+    },
+    {
+      "mark": "05",
+      "title": "Villas & Kothis",
+      "desc": "Premium independent villas and kothis in planned residential sectors."
+    },
+    {
+      "mark": "06",
+      "title": "Farm Houses",
+      "desc": "Weekend and investment farm houses around New Chandigarh."
+    },
+    {
+      "mark": "07",
+      "title": "Agriculture Land",
+      "desc": "Verified khasra-checked agricultural parcels of every size."
+    }
+  ]
+}
