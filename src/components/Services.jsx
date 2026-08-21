@@ -2,6 +2,8 @@ import Reveal from './Reveal'
 import { services } from '../data/content'
 
 export default function Services() {
+  const { eyebrow, title, subtitle, items } = services
+
   return (
     <section
       id="services"
@@ -11,18 +13,18 @@ export default function Services() {
       <div className="mx-auto max-w-[1440px]">
         <Reveal className="mx-auto mb-14 flex max-w-[520px] flex-col gap-3.5 text-center">
           <span className="text-[11.5px] tracking-[4.5px] text-[#a08f63] uppercase">
-            Deals In
+            {eyebrow}
           </span>
           <h2 className="m-0 font-serif text-[clamp(32px,4vw,48px)] font-normal text-cream-soft">
-            All types of properties
+            {title}
           </h2>
           <p className="m-0 text-[15.5px] leading-[1.7] font-normal text-muted">
-            Buying, selling, renting or investing — we cover the full spectrum.
+            {subtitle}
           </p>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, i) => (
+          {items.map((s, i) => (
             <Reveal
               key={s.mark}
               delay={i * 40}

@@ -2,28 +2,30 @@ import Reveal from './Reveal'
 import { listings } from '../data/content'
 
 export default function Listings() {
+  const { eyebrow, title, ctaText, items } = listings
+
   return (
     <section id="listings" className="px-6 py-25">
       <div className="mx-auto max-w-[1440px]">
         <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-5">
           <div className="flex flex-col gap-3">
             <span className="text-[11.5px] tracking-[4.5px] text-[#a08f63] uppercase">
-              Featured
+              {eyebrow}
             </span>
             <h2 className="m-0 font-serif text-[clamp(32px,4vw,48px)] font-normal text-cream-soft">
-              Current listings
+              {title}
             </h2>
           </div>
           <a
             href="#contact"
             className="border-b border-gold/40 pb-1 text-[13px] tracking-[2px] uppercase"
           >
-            Request full inventory
+            {ctaText}
           </a>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {listings.map((l, i) => (
+          {items.map((l, i) => (
             <Reveal
               key={l.title}
               as="article"

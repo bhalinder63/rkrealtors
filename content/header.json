@@ -1,0 +1,11 @@
+{
+  "navLinks": [
+    { "href": "#home", "label": "Home" },
+    { "href": "#about", "label": "About" },
+    { "href": "#services", "label": "Services" },
+    { "href": "#listings", "label": "Listings" },
+    { "href": "#team", "label": "Team" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "ctaText": "Call Now"
+}

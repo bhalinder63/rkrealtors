@@ -11,6 +11,59 @@ media_folder: public/uploads
 public_folder: /uploads
 
 collections:
+  - name: header
+    label: Header
+    files:
+      - file: content/header.json
+        name: header
+        label: Header
+        format: json
+        fields:
+          - label: Nav Links
+            name: navLinks
+            widget: list
+            summary: '{{fields.label}}'
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: 'Link (anchor on the page, e.g. #about)', name: href, widget: string }
+          - { label: 'Call Button Text', name: ctaText, widget: string }
+
+  - name: hero
+    label: Hero
+    files:
+      - file: content/hero.json
+        name: hero
+        label: Hero
+        format: json
+        fields:
+          - { label: 'Location Badge', name: badge, widget: string, hint: 'e.g. New Chandigarh · Chandigarh · Mohali · Patiala' }
+          - { label: 'Heading — text before the highlighted name', name: headingPrefix, widget: string }
+          - { label: 'Heading — highlighted name', name: headingHighlight, widget: string }
+          - { label: Paragraph, name: paragraph, widget: text }
+          - { label: 'Primary Button Text', name: primaryButtonText, widget: string, hint: 'links to Contact section' }
+          - { label: 'Secondary Button Text', name: secondaryButtonText, widget: string, hint: 'links to Listings section' }
+
+  - name: about
+    label: About
+    files:
+      - file: content/about.json
+        name: about
+        label: About
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: 'Heading — text before the highlighted word', name: headingPrefix, widget: string }
+          - { label: 'Heading — highlighted word', name: headingHighlight, widget: string }
+          - { label: 'Paragraph 1', name: paragraph1, widget: text }
+          - { label: 'Paragraph 2', name: paragraph2, widget: text }
+          - label: Features
+            name: features
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string }
+
   - name: services
     label: Services
     files:
@@ -19,6 +72,9 @@ collections:
         label: Services List
         format: json
         fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: text }
           - label: Items
             name: items
             widget: list
@@ -36,6 +92,9 @@ collections:
         label: Property Listings
         format: json
         fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: 'Link Text', name: ctaText, widget: string, hint: 'links to Contact section' }
           - label: Items
             name: items
             widget: list
@@ -56,6 +115,8 @@ collections:
         label: Team Members
         format: json
         fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Title, name: title, widget: string }
           - label: Items
             name: items
             widget: list
@@ -65,6 +126,39 @@ collections:
               - { label: Role, name: role, widget: string }
               - { label: 'Phone (shown on site)', name: phone, widget: string, hint: 'e.g. +91 98145 53349' }
               - { label: 'Phone link (tap-to-call)', name: tel, widget: string, hint: 'e.g. tel:+919814553349 — no spaces' }
+
+  - name: contact
+    label: Contact Section
+    files:
+      - file: content/contact.json
+        name: contact
+        label: Contact Section
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Paragraph, name: paragraph, widget: text }
+          - { label: 'Map Placeholder — line 1', name: mapPlaceholderLine1, widget: string }
+          - { label: 'Map Placeholder — line 2', name: mapPlaceholderLine2, widget: string }
+          - { label: 'Submit Button Text', name: submitButtonText, widget: string }
+          - { label: 'WhatsApp Note (phone number is added automatically after this text)', name: whatsappNote, widget: string }
+          - { label: 'Success — Heading', name: successHeading, widget: string }
+          - { label: 'Success — Paragraph', name: successParagraph, widget: text }
+          - { label: 'Success — Button Text', name: successButtonText, widget: string }
+
+  - name: footer
+    label: Footer
+    files:
+      - file: content/footer.json
+        name: footer
+        label: Footer
+        format: json
+        fields:
+          - { label: Description, name: description, widget: text }
+          - { label: 'Quick Links Label', name: quickLinksLabel, widget: string }
+          - { label: 'Reach Us Label', name: reachUsLabel, widget: string }
+          - { label: 'Instagram Button Text', name: instagramLabel, widget: string }
+          - { label: 'Bottom Tagline', name: tagline, widget: string }
 
   - name: settings
     label: Site Settings

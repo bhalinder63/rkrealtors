@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Logo from './Logo'
-import { navLinks, contact } from '../data/content'
+import { navLinks, headerCta, contact } from '../data/content'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -27,7 +27,7 @@ export default function Header() {
             href={contact.ramandeepTel}
             className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-gold/55 px-5 text-[13px] tracking-[1.4px] whitespace-nowrap text-gold-light uppercase transition-[transform,background,color,border-color] duration-200 hover:-translate-y-0.5 hover:border-transparent hover:bg-[linear-gradient(145deg,#f3dfa8,#c79a3c)] hover:text-[#0a0908]"
           >
-            Call Now
+            {headerCta}
           </a>
         </nav>
 
@@ -70,7 +70,7 @@ export default function Header() {
             href={contact.ramandeepTel}
             className="mt-6 inline-flex min-h-[44px] w-full items-center justify-center rounded-full border border-gold/55 px-5 text-center text-[13px] tracking-[1.4px] text-gold-light uppercase transition-colors hover:border-transparent hover:bg-[linear-gradient(145deg,#f3dfa8,#c79a3c)] hover:text-[#0a0908]"
           >
-            Call Now
+            {headerCta}
           </a>
         </div>
       )}

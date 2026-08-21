@@ -1,12 +1,24 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
-import { contact } from '../data/content'
+import { contact, contactContent } from '../data/content'
 
 const initialForm = { name: '', phone: '', email: '', message: '' }
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
   const [sent, setSent] = useState(false)
+  const {
+    eyebrow,
+    heading,
+    paragraph,
+    mapPlaceholderLine1,
+    mapPlaceholderLine2,
+    submitButtonText,
+    whatsappNote,
+    successHeading,
+    successParagraph,
+    successButtonText,
+  } = contactContent
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -36,13 +48,12 @@ export default function Contact() {
     <section id="contact" className="px-6 py-25">
       <div className="mx-auto grid max-w-[1440px] gap-14 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]">
         <Reveal className="flex flex-col gap-5">
-          <span className="text-[11.5px] tracking-[4.5px] text-[#a08f63] uppercase">Contact</span>
+          <span className="text-[11.5px] tracking-[4.5px] text-[#a08f63] uppercase">{eyebrow}</span>
           <h2 className="m-0 font-serif text-[clamp(32px,4vw,46px)] leading-[1.15] font-normal text-cream-soft">
-            Tell us what you&apos;re looking for
+            {heading}
           </h2>
           <p className="m-0 text-[15.5px] leading-[1.8] font-normal text-muted-soft">
-            Share your budget, preferred location and property type — we&apos;ll shortlist
-            matching options and arrange site visits.
+            {paragraph}
           </p>
 
           <div className="mt-1.5 flex flex-col gap-0.5">
@@ -68,9 +79,9 @@ export default function Contact() {
 
           <div className="mt-2 grid h-[210px] place-items-center rounded-2xl border border-gold/20 bg-[repeating-linear-gradient(135deg,#141210_0_14px,#100e0c_14px_28px)]">
             <span className="text-center font-mono text-[11.5px] tracking-[1.4px] text-[#807b6c]">
-              [ google map embed ]
+              {mapPlaceholderLine1}
               <br />
-              New Chandigarh · Chandigarh · Mohali · Patiala
+              {mapPlaceholderLine2}
             </span>
           </div>
         </Reveal>
@@ -96,16 +107,16 @@ export default function Contact() {
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
               </span>
-              <h3 className="m-0 font-serif text-[28px] text-cream-soft">Enquiry received</h3>
+              <h3 className="m-0 font-serif text-[28px] text-cream-soft">{successHeading}</h3>
               <p className="m-0 text-[15px] font-normal text-muted-soft">
-                We&apos;ll call you back shortly on the number provided.
+                {successParagraph}
               </p>
               <button
                 type="button"
                 onClick={() => setSent(false)}
                 className="mt-2 inline-flex min-h-[44px] cursor-pointer items-center justify-center px-4 text-[13px] tracking-[1.6px] text-gold-light uppercase transition-colors hover:text-gold-pale"
               >
-                Send another enquiry
+                {successButtonText}
               </button>
             </div>
           ) : (
@@ -162,10 +173,10 @@ export default function Contact() {
                 type="submit"
                 className="mt-1.5 min-h-[44px] cursor-pointer rounded-full bg-[linear-gradient(145deg,#f6e7bb,#c79a3c_55%,#a4762a)] py-4 text-[13px] font-medium tracking-[2.2px] text-[#0a0908] uppercase transition-[filter] hover:brightness-[1.09]"
               >
-                Send Enquiry
+                {submitButtonText}
               </button>
               <p className="m-0 text-center text-[12.5px] text-muted-faint">
-                Or WhatsApp us directly on {contact.ramandeepPhone}
+                {whatsappNote} {contact.ramandeepPhone}
               </p>
             </form>
           )}

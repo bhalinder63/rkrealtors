@@ -1,0 +1,11 @@
+{
+  "eyebrow": "About the Firm",
+  "headingPrefix": "A full-service property desk built on",
+  "headingHighlight": "trust",
+  "paragraph1": "RK Realtors is a property consultancy dealing in every category of real estate across New Chandigarh, Chandigarh, Mohali and Patiala — from residential plots and builder floors to commercial units, villas, farm houses and agricultural land. We work in our own backyard, which means we know each sector, rate trend and society by name.",
+  "paragraph2": "Every client is handled personally by Ramandeep or Kamaldeep Singh — from the first site visit to registry and possession. No call centres, no hidden brokerage, no rushed decisions.",
+  "features": [
+    { "title": "Verified Listings", "desc": "Title-checked inventory" },
+    { "title": "End-to-End", "desc": "Loan, papers, registry" }
+  ]
+}

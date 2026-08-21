@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
 import CountUp from './CountUp'
 import logo from '../assets/logo.png'
-import { heroImages, stats } from '../data/content'
+import { hero, heroImages, stats } from '../data/content'
 
 export default function Hero() {
   const [slide, setSlide] = useState(0)
@@ -72,7 +72,7 @@ export default function Hero() {
           delay={80}
           className="m-0 text-xs tracking-[5px] text-[#a09879] uppercase"
         >
-          New Chandigarh &nbsp;·&nbsp; Chandigarh &nbsp;·&nbsp; Mohali &nbsp;·&nbsp; Patiala
+          {hero.badge}
         </Reveal>
 
         <Reveal
@@ -80,9 +80,9 @@ export default function Hero() {
           delay={140}
           className="m-0 text-balance font-serif text-[clamp(40px,6.4vw,76px)] leading-[1.06] font-normal tracking-[-0.5px] text-cream-strong"
         >
-          Find Your Perfect Property with{' '}
+          {hero.headingPrefix}{' '}
           <span className="text-shimmer bg-[linear-gradient(120deg,#f6e7bb,#d8b25f_35%,#a97f2a_50%,#d8b25f_65%,#f6e7bb)] bg-clip-text font-serif text-transparent italic">
-            RK Realtors
+            {hero.headingHighlight}
           </span>
         </Reveal>
 
@@ -91,9 +91,7 @@ export default function Hero() {
           delay={200}
           className="m-0 max-w-[620px] text-pretty text-[17px] leading-[1.75] font-normal text-[#cec8bc] [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]"
         >
-          Trusted realtors across the Tricity and Patiala — plots, builder floors, flats, villas,
-          farm houses and commercial spaces. Honest advice, verified inventory, complete
-          paperwork support. Buy · Sell · Invest — smart investment, made simple.
+          {hero.paragraph}
         </Reveal>
 
         <Reveal
@@ -104,13 +102,13 @@ export default function Hero() {
             href="#contact"
             className="rounded-full bg-[linear-gradient(145deg,#f6e7bb,#c79a3c_55%,#a4762a)] px-8.5 py-3.5 text-[13.5px] font-medium tracking-[2px] text-[#0a0908] uppercase shadow-[0_16px_40px_rgba(199,154,60,0.24)] transition-[transform,filter] duration-200 hover:-translate-y-0.5 hover:brightness-[1.09]"
           >
-            Contact Us
+            {hero.primaryButtonText}
           </a>
           <a
             href="#listings"
             className="rounded-full border border-gold/40 px-8.5 py-3.5 text-[13.5px] tracking-[2px] text-[#e2d7bd] uppercase transition-[transform,border-color,color] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-gold-light"
           >
-            View Properties
+            {hero.secondaryButtonText}
           </a>
         </Reveal>
 

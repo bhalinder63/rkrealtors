@@ -2,6 +2,8 @@ import Reveal from './Reveal'
 import { team } from '../data/content'
 
 export default function Team() {
+  const { eyebrow, title, items } = team
+
   return (
     <section
       id="team"
@@ -11,15 +13,15 @@ export default function Team() {
       <div className="mx-auto max-w-[1440px]">
         <Reveal className="mb-13 flex flex-col gap-3.5 text-center">
           <span className="text-[11.5px] tracking-[4.5px] text-[#a08f63] uppercase">
-            The Team
+            {eyebrow}
           </span>
           <h2 className="m-0 font-serif text-[clamp(32px,4vw,48px)] font-normal text-cream-soft">
-            Speak to us directly
+            {title}
           </h2>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {team.map((t) => (
+          {items.map((t) => (
             <Reveal
               key={t.name}
               className="group flex items-center gap-5.5 rounded-[20px] border border-gold/[0.18] bg-[linear-gradient(165deg,rgba(216,178,95,0.055),transparent)] p-7.5 transition-[transform,border-color,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-[0_20px_45px_rgba(0,0,0,0.4)]"
